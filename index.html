@@ -9,21 +9,23 @@
     <!-- COLLEGAMENTO AXIOS -->
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js)"
       defer
     ></script>
 
     <!-- CDN VUE JS -->
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/vue@3/dist/vue.global.js"
-    ></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <!-- COLLEGAMENTO JS -->
     <script type="text/javascript" src="./js/app.js" defer></script>
   </head>
 
   <body>
-    <div class="container" id="app"></div>
+    <div class="container" id="app">
+      <button @click="generateMail()">Click me</button>
+      <ul>
+        <li v-for="email in emails">{{email}}</li>
+      </ul>
+    </div>
   </body>
 </html>
